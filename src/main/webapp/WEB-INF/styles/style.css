@@ -1,0 +1,233 @@
+* {
+    margin: 0; padding: 0;
+}
+
+body {
+    background-image: url(/WEB-INF/images/main_background.jpg);
+    background-size: cover;
+}
+/*======================== NAVIGATOR =====================*/
+
+#navigator ul {
+    list-style-type: none;
+    display: block;
+    
+    background-color: rgb(44, 44, 44);
+}
+
+#navigator ul li {
+    display: inline;
+    line-height: 2px;
+    
+    padding-bottom: 12px; padding-top: 22px;
+    margin-left: 7px;
+}
+/*======================== MENU ========================*/
+#main_link {
+    position: relative; top: 0;
+}
+
+a.menu_link {
+    position: relative; top: -17px;
+    text-decoration: none;
+    
+    font-family: sans-serif;
+    font-size: 13pt;
+    font-weight: 700;
+    
+    padding: 15px 40px;
+    margin-bottom: 19px;
+
+}
+
+a:link.menu_link, a:visited.menu_link {
+    color: #EBEBEB;
+}
+
+a:hover.menu_link {
+    color: #151519;
+    background-color: #006DA3;
+}
+
+#account_btn {
+    position: absolute;
+    top: 20px; right: 2%;
+}
+
+
+
+/*======================== MAIN_CONTENT ========================*/
+.main_content {
+    display: block;
+    position: absolute;
+    
+    width: 60%; 
+    top: 15%; left: 20%;
+    
+    background-color: rgba(37, 43, 55, 0.7);
+    text-align: center;
+}
+
+#hat {
+    color: #13C3FB;
+    font-family: cursive;
+    
+    margin-top: 25px;
+    text-align: center;
+    
+}
+
+#shoe {
+    color: #13C3FB;
+    
+    font-family: cursive;
+    font-size: 16pt;
+    font-weight: 600;
+    margin-top: 10%;
+    
+    text-align: center;
+}
+
+#question {
+    color: #DDD8E4;
+   
+    font-family: cursive;
+    font-size:  250pt;
+    text-align: center;
+    vertical-align: middle;
+    
+    margin-top: 5%;
+    line-height: 40%;
+}
+
+.main_content ul{
+    list-style-type: none;
+    
+    display: block;
+    margin-top: 2%;
+}
+
+.main_content ul li{
+    display: inline;
+    position: relative;
+    top: 25%;
+    padding: 0 1%;
+}
+
+a.links_bar {
+    position: relative; 
+    text-decoration: none;
+    
+    font-family: sans-serif;
+    font-size: 13pt;
+    font-weight: 700;
+    
+    padding: 15px 40px;
+}
+
+a:link.links_bar, a:visited.links_bar {
+    color: #EBEBEB;
+    font-size: 13pt;
+    font-weight: 600;
+}
+
+a:hover.links_bar {
+    color: #151519;
+    background-color: #006DA3;
+}
+
+/*======================== SIGN_IN BUTTON ========================*/
+.overlay {
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: 10;
+    display: none;
+    
+    background-color: rgba(20, 20, 20, 0.4);
+    position: fixed;
+    cursor: default;
+}
+
+.overlay:target {
+    display: block;
+}
+
+.sign_in_popup, .sign_up_popup {
+    top: -100%;
+    right: 0;
+    left: 90%;
+    z-index: 20;
+    margin: 0;
+    width: 3%;
+    min-width: 230px;
+    max-width: 2700px;
+/* фиксированное позиционирование, окно стабильно при прокрутке */
+    position: fixed;
+    padding: 15px;
+    border: 2px solid #383838;
+    background: rgba(44, 44, 44, 0.4);
+/* скругление углов */
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    font: 14px/18px 'Tahoma', Arial, sans-serif;
+    color: #DDD8E4;
+
+    
+    -webkit-transform: translate(-50%, -500%);
+    -ms-transform: translate(-50%, -500%);
+    -o-transform: translate(-50%, -500%);
+    transform: translate(-50%, -500%);
+    -webkit-transition: -webkit-transform 0.6s ease-out;
+    -moz-transition: -moz-transform 0.6s ease-out;
+    -o-transition: -o-transform 0.6s ease-out;
+    transition: transform 0.6s ease-out;
+}
+/* активируем модальный блок */
+.overlay:target+.sign_in_popup, .overlay:target+.sign_up_popup {
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    top: 10%;
+}
+
+.sign_in_input {
+    background-color: rgba(44, 44, 44, 0.01);
+    color: #EBEBEB;
+    border-width: 0;
+    border-bottom-width: 2px;
+    line-height: 35px;
+    border-bottom-color: #006DA3;
+    width: 100%;
+    margin-top: 3%;
+}
+#sign_in_btn, #sign_up_btn, #sign_up_confirm {
+    position: relative;
+    top: 100%;
+    margin-top: 10%;
+    background-color: rgba(44, 44, 44, 0.01);
+    border-style: none;
+    color: #EBEBEB;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 11pt;    
+}
+#sign_in_btn:active, #sign_up_btn:active, #sign_up_confirm:active {
+    background-color: rgba(0, 109, 169, 0.5);
+}
+#sign_in_btn, #sign_up_confirm {
+    left: 1%;
+    padding: 15px 25px;
+
+}
+#sign_up_btn {
+    right: -5%;
+    padding: 15px 15px;
+}
+a.sign_up_link {
+    text-decoration: none;
+    color: #EBEBEB;
+}
+
+
