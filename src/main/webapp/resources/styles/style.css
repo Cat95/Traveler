@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url(/WEB-INF/images/main_background.jpg);
+    background-image: url(/resources/images/main_background.jpg);
     background-size: cover;
 }
 /*======================== NAVIGATOR =====================*/

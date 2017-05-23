@@ -10,16 +10,16 @@
 <html>
 <head>
     <meta charset = "utf-8">
-    <link rel = "stylesheet" href = "WEB-INF/styles/style.css">
-    <script type="text/javascript" src="WEB-INF/scripts/jquery-3.2.0.js"></script>
-    <script type="text/javascript" src="WEB-INF/scripts/script.js"></script>
+    <link rel = "stylesheet" href = "resources/styles/style.css">
+    <script type="text/javascript" src="resources/scripts/jquery-3.2.0.js"></script>
+    <script type="text/javascript" src="resources/scripts/script.js"></script>
     <title>Traveler - главная</title>
 </head>
 <body>
 <div id = "navigator">
     <ul>
         <li>
-            <a id = "main_link" href = "WEB-INF/views/index.jsp"><img src = "WEB-INF/images/main_ico.png"></a>
+            <a id = "main_link" href = "WEB-INF/views/index.jsp"><img src = "resources/images/main_ico.png"></a>
         </li>
         <li><a class = "menu_link" href = "">Библиотека</a></li>
         <li><a class = "menu_link" href = "">Поиск</a></li>
