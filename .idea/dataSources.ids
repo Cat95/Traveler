@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="TravelerDB" uuid="3a8d049a-ab2b-4f9b-b1c5-3efda18d1815">
+  <data-source name="Traveler" uuid="ea0c39d4-17ac-4d09-b309-ca747158866e">
     <database-info product="H2" version="1.4.192 (2016-05-26)" jdbc-version="4.0" driver-name="H2 JDBC Driver" driver-version="1.4.192 (2016-05-26)">
       <identifier-quote-string>&quot;</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
     <schema name="PUBLIC" catalog="TRAVELER"/>
+    <table name="USER" schema="PUBLIC" catalog="TRAVELER" type="TABLE">
+      <column name="ID" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfMDRDQTAyOTZfMjBCRV80NEZFXzlDODVfMzJEREEyQzdFODk5KQ==" autoIncrement="true"/>
+      <column name="LOGIN" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PASSWORD" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="CONSTRAINT_2" columns="ID"/>
+      <index name="UNIQUE_LOGIN_INDEX_2" unique="true" columns="LOGIN"/>
+    </table>
   </data-source>
 </component>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2367448711">
-    <data-source source="LOCAL" name="TravelerDB" uuid="3a8d049a-ab2b-4f9b-b1c5-3efda18d1815">
+  <component name="DataSourceManagerImpl" format="xml" hash="2856688856">
+    <data-source source="LOCAL" name="Traveler" uuid="ea0c39d4-17ac-4d09-b309-ca747158866e">
       <driver-ref>h2.embedded</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.h2.Driver</jdbc-driver>
