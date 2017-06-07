@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="Traveler" uuid="ea0c39d4-17ac-4d09-b309-ca747158866e">
+    <data-source name="MySQL - travelerdb@localhost" uuid="bdf29f4c-d8a3-44e3-9338-97fccdf7b1cb">
       <secret-storage>master_key</secret-storage>
-      <schema-pattern>TRAVELER.PUBLIC</schema-pattern>
-      <default-schemas>TRAVELER.PUBLIC</default-schemas>
+      <user-name>root</user-name>
+      <schema-pattern>travelerdb.*</schema-pattern>
+      <default-schemas>travelerdb.*</default-schemas>
     </data-source>
   </component>
 </project>

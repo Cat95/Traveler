@@ -31,6 +31,10 @@ public class UserServiceImpl implements UserService {
         return dao.findByID(ID);
     }
 
+    public User findByLogin(String login) {
+        return dao.findByLogin(login);
+    }
+
     public void updateUser(User user) {
         dao.updateUser(user);
     }

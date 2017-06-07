@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="Traveler" uuid="ea0c39d4-17ac-4d09-b309-ca747158866e">
-    <database-info product="H2" version="1.4.192 (2016-05-26)" jdbc-version="4.0" driver-name="H2 JDBC Driver" driver-version="1.4.192 (2016-05-26)">
-      <identifier-quote-string>&quot;</identifier-quote-string>
+  <data-source name="MySQL - travelerdb@localhost" uuid="bdf29f4c-d8a3-44e3-9338-97fccdf7b1cb">
+    <database-info product="MySQL" version="5.7.18-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.40 ( Revision: 402933ef52cad9aa82624e80acbea46e3a701ce6 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
     </database-info>
-    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
-    <schema name="PUBLIC" catalog="TRAVELER"/>
-    <table name="USER" schema="PUBLIC" catalog="TRAVELER" type="TABLE">
-      <column name="ID" sqlType="INTEGER" precision="10" scale="0" nullable="false" jdbcType="4" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfMDRDQTAyOTZfMjBCRV80NEZFXzlDODVfMzJEREEyQzdFODk5KQ==" autoIncrement="true"/>
-      <column name="LOGIN" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
-      <column name="PASSWORD" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="CONSTRAINT_2" columns="ID"/>
-      <index name="UNIQUE_LOGIN_INDEX_2" unique="true" columns="LOGIN"/>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="travelerdb"/>
+    <table name="user" schema="" catalog="travelerdb" type="TABLE">
+      <column name="ID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Login" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Password" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="ID"/>
+      <index name="unique_ID" unique="true" columns="ID"/>
+      <index name="unique_Login" unique="true" columns="Login"/>
     </table>
   </data-source>
 </component>

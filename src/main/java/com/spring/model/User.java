@@ -12,7 +12,7 @@ public class User {
     private String password;
 
     @Id
-    @Column(name = "ID", nullable = false, insertable = true, updatable = true)
+    @Column(name = "ID")
     public int getId() {
         return id;
     }
@@ -22,7 +22,7 @@ public class User {
     }
 
     @Basic
-    @Column(name = "LOGIN", nullable = false, insertable = true, updatable = true, length = 20)
+    @Column(name = "Login")
     public String getLogin() {
         return login;
     }
@@ -32,7 +32,7 @@ public class User {
     }
 
     @Basic
-    @Column(name = "PASSWORD", nullable = false, insertable = true, updatable = true, length = 20)
+    @Column(name = "Password")
     public String getPassword() {
         return password;
     }

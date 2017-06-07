@@ -5,6 +5,7 @@
   Time: 1:44
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -28,26 +29,22 @@
 </div>
 <a href = "" class = "overlay" id = "sign_in_block"></a>
 <div class = "sign_in_popup">
-    <form action = "" method = "get">
-        <input type = "text" placeholder = "Логин" class = "sign_in_input"><br>
-        <input type = "text" placeholder = "Пароль" class = "sign_in_input"><br>
-        <button id = "sign_in_btn" type = "submit">
-            Вход
-        </button>
-        <button id = "sign_up_btn" type = "submit">
-            <a class = "sign_up_link" href = "#sign_up_block">Регистрация</a>
-        </button>
-    </form>
+    <spring:form method="get" modelAttribute="user" action="reg">
+        <spring:input path="login" class="sign_in_input" placeholder="Логин"/><br>
+        <spring:input path="password" class="sign_in_input" placeholder="Пароль"/><br>
+        <spring:button id="sign_in_btn">Вход</spring:button>
+        <spring:button id="sign_up_btn">
+            <a class="sign_up_link" href="#sign_up_block">Регистрация</a>
+        </spring:button>
+    </spring:form>
 </div>
 <a href = "" class = "overlay" id = "sign_up_block"></a>
 <div class = "sign_up_popup">
-    <form action = "" method="post">
-        <input id="login" type = "text" placeholder = "Логин" class = "sign_in_input" name="login"><br>
-        <input id="password" type = "text" placeholder = "Пароль" class = "sign_in_input" name="password"><br>
-        <input id="re_password" type = "text" placeholder = "Повторите пароль" class = "sign_in_input" name="rePassword"><br>
-        <input id = "sign_up_confirm" type = "submit" formmethod="post" value="Зарегестрироваться">
-        <!--     <a class = "sign_up_link" href = "#sign_in_block">Зарегестрироваться</a>-->
-    </form>
+    <spring:form method="post" modelAttribute="user" action="reg">
+        <spring:input path="login" id="login" class="sign_in_input" name="login" placeholder="Логин"/><br>
+        <spring:input path="password" id="password" class="sign_in_input" name="password" placeholder="Пароль"/><br>
+        <spring:button id="sign_up_confirm">Зарегестрироваться</spring:button>
+    </spring:form>
 </div>
 <div class = "main_content">
     <ul>

@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2856688856">
-    <data-source source="LOCAL" name="Traveler" uuid="ea0c39d4-17ac-4d09-b309-ca747158866e">
-      <driver-ref>h2.embedded</driver-ref>
+  <component name="DataSourceManagerImpl" format="xml" hash="3295577752">
+    <data-source source="LOCAL" name="MySQL - travelerdb@localhost" uuid="bdf29f4c-d8a3-44e3-9338-97fccdf7b1cb">
+      <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>org.h2.Driver</jdbc-driver>
-      <jdbc-url>jdbc:h2:file:$PROJECT_DIR$/src/main/resources/Traveler</jdbc-url>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/travelerdb</jdbc-url>
+      <driver-properties>
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="characterSetResults" value="utf8" />
+        <property name="yearIsDateType" value="false" />
+      </driver-properties>
       <libraries />
     </data-source>
   </component>

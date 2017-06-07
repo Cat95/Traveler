@@ -12,7 +12,7 @@ import java.util.List;
 public class UserDaoImpl extends AbstractDao implements UserDao {
 
     public void saveUser(User user) {
-        persist(user);
+        save(user);
     }
 
     @SuppressWarnings("unchecked")
@@ -30,6 +30,12 @@ public class UserDaoImpl extends AbstractDao implements UserDao {
     public User findByID(int ID) {
         Criteria criteria = getSession().createCriteria(User.class);
         criteria.add(Restrictions.eq("id", ID));
+        return (User) criteria.uniqueResult();
+    }
+
+    public User findByLogin(String login) {
+        Criteria criteria = getSession().createCriteria(User.class);
+        criteria.add(Restrictions.eq("login", login));
         return (User) criteria.uniqueResult();
     }
 
