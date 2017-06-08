@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url(/resources/images/main_background.jpg);
+    background: #383838 url(/resources/images/main_background.jpg);
     background-size: cover;
 }
 /*======================== NAVIGATOR =====================*/
@@ -230,4 +230,16 @@ a.sign_up_link {
     color: #EBEBEB;
 }
 
+/*======================== LIST ========================*/
+div.list {
+    display: block;
+    position: absolute;
+
+    width: 80%;
+    height: 100%;
+
+    color: #EBEBEB;
+
+    background-color: #383838;
+}
 

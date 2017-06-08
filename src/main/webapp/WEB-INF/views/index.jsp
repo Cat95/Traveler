@@ -20,9 +20,9 @@
 <div id = "navigator">
     <ul>
         <li>
-            <a id = "main_link" href = "WEB-INF/views/index.jsp"><img src = "resources/images/main_ico.png"></a>
+            <a id = "main_link" href = "http://localhost:8080/"><img src = "resources/images/main_ico.png"></a>
         </li>
-        <li><a class = "menu_link" href = "">Библиотека</a></li>
+        <li><a class = "menu_link" href = "http://localhost:8080/list">Список</a></li>
         <li><a class = "menu_link" href = "">Поиск</a></li>
         <li id = "account_btn"><a class = "menu_link" href = "#sign_in_block">Вход</a></li>
     </ul>
