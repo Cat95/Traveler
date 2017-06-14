@@ -18,13 +18,9 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
+@EnableWebMvc
 @EnableTransactionManagement
-@ComponentScan(
-        basePackages = { "com.spring" },
-        excludeFilters = { @ComponentScan.Filter(
-                type = FilterType.ANNOTATION,
-                value = Configuration.class)}
-)
+@ComponentScan(basePackages = "com.spring")
 @PropertySource(value = {"classpath:application.properties"})
 public class WebConfiguration extends WebMvcConfigurerAdapter {
     @Autowired
@@ -49,7 +45,7 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan("com.spring.model");  //new String[] { "com.spring.model" }
+        sessionFactory.setPackagesToScan("com.spring.model");
         sessionFactory.setHibernateProperties(hibernateProperties());
         return sessionFactory;
     }

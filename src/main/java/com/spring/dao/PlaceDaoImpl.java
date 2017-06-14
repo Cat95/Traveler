@@ -64,5 +64,17 @@ public class PlaceDaoImpl extends AbstractDao implements PlaceDao {
                 .list();
     }
 
+    @SuppressWarnings("unchecked")
+    public List<Place> findByRate(int rate) {
+        return getSession().createCriteria(Place.class)
+                .add(Restrictions.ge("rate", rate))
+                .list();
+    }
 
+    @SuppressWarnings("unchecked")
+    public List<Place> findBySameName(String name) {
+        return getSession().createCriteria(Place.class)
+                .add(Restrictions.like("name","%" + name + "%"))
+                .list();
+    }
 }

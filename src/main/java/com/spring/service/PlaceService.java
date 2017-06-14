@@ -22,4 +22,8 @@ public interface PlaceService {
     List<Place> findByRestType(String restType);
 
     List<Place> findByCountry(String country);
+
+    List<Place> findByRate(int rate);
+
+    List<Place> findBySameName(String name);
 }

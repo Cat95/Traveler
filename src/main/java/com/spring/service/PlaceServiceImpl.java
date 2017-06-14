@@ -49,4 +49,12 @@ public class PlaceServiceImpl implements PlaceService{
     public List<Place> findByCountry(String country) {
         return dao.findByCountry(country);
     }
+
+    public List<Place> findByRate(int rate) {
+        return dao.findByRate(rate);
+    }
+
+    public List<Place> findBySameName(String name) {
+        return dao.findBySameName(name);
+    }
 }
